@@ -5,7 +5,13 @@
   <%= submit_tag("Get data") %>
 <% end %>
 
+<br>
+<p style="color:red;">Data shown here is from 2008-2014</p>
 
+<br/>
+W = <%= @won_games.to_s %> <br/>
+L = <%= @lost_games.to_s %> <br/>
+D = <%= @draw_games.to_s %> <br/>
 <br/>
 Games played at home<br/>
 <table border="1">

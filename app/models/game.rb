@@ -16,9 +16,23 @@ class Game < ActiveRecord::Base
   end
 
   def self.won_games(team)
+    games_won1 = self.where('home_team=? and home_goals>away_goals', team).count
+    games_won2 = self.where('away_team=? and away_goals>home_goals', team).count
+    games_won = games_won1 + games_won2;
+    return games_won
   end
 
   def self.lost_games(team)
+    games_won1 = self.where('home_team=? and home_goals<away_goals', team).count
+    games_won2 = self.where('away_team=? and away_goals<home_goals', team).count
+    games_won = games_won1 + games_won2;
+    return games_won
   end
 
+  def self.draw_games(team)
+    games_won1 = self.where('home_team=? and home_goals=away_goals', team).count
+    games_won2 = self.where('away_team=? and away_goals=home_goals', team).count
+    games_won = games_won1 + games_won2;
+    return games_won
+  end
 end
