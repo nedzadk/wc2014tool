@@ -1,0 +1,53 @@
+
+<%= form_tag("/home",method: "get") do %>
+  <%= label_tag(:team, "Team name") %><br/>
+  <%= text_field_tag(:team) %>
+  <%= submit_tag("Get data") %>
+<% end %>
+
+
+<br/>
+Games played at home<br/>
+<table border="1">
+  <tr><th>Time</th><th>Home team</th><th>Away team</th><th></th><th></th></tr>
+  <% @games.each do |game| %>
+<tr>
+  <td><%= game.played.to_s %></td>
+  <td><%= game.home_team %> - </td>
+  <td><%= game.away_team %></td>
+  <td><%= game.home_goals %></td>
+  <td><%= game.away_goals %></td>
+</tr>
+<% end %>
+</table>
+<br/>
+
+Games played away<br/>
+<table border="1">
+  <tr><th>Time</th><th>Home team</th><th>Away team</th><th></th><th></th></tr>
+<% @games_away.each do |game| %>
+<tr>
+  <td><%= game.played.to_s %></td>
+  <td><%= game.home_team %> - </td>
+  <td><%= game.away_team %></td>
+  <td><%= game.home_goals %></td>
+  <td><%= game.away_goals %></td>
+</tr>
+<% end %>
+</table>
+
+<br/>
+
+Games played on neutral field<br/>
+<table border="1">
+  <tr><th>Time</th><th>Home team</th><th>Away team</th><th></th><th></th></tr>
+<% @neutral_field_games.each do |game| %>
+<tr>
+  <td><%= game.played.to_s %></td>
+  <td><%= game.home_team %> - </td>
+  <td><%= game.away_team %></td>
+  <td><%= game.home_goals %></td>
+  <td><%= game.away_goals %></td>
+</tr>
+<% end %>
+</table>

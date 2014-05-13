@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  played: 2014-05-13 08:07:34
+  home_team: MyString
+  away_team: MyString
+  home_goals: 1
+  away_goals: 1
+  neutral_field: 1
+
+two:
+  played: 2014-05-13 08:07:34
+  home_team: MyString
+  away_team: MyString
+  home_goals: 1
+  away_goals: 1
+  neutral_field: 1
