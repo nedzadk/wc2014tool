@@ -1,4 +1,4 @@
-== Brazil Wolrd Cup 2014 Tool 
+== Brazil World Cup 2014 Tool 
 Database with all international games from 2008 year. 
 Simple interface to search for team and see their results
 
